@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>tp-01_parent-johanne</title>
+    <script src="main.js" defer></script>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body id="top">
+    <header>
+      <h1>16 éléments cool en css3</h1>
+    </header>
+    <nav class="sticky"><a href="#top">Top</a></nav>
+    <main>
+      <p>
+        Dans le cadre du cours AGT, ce site Web est créé pour vous présenter
+        seize propriétés CSS que je trouve cool.
+      </p>
+      <ul>
+        <li class="accordion hidden">
+          <h2 class="title">A</h2>
+          <dl class="content">
+            <dt>CSS animation-name</dt>
+            <dd>
+              Cette propriété permet l'animation de texte sans devoir utiliser
+              le JavaScript.
+            </dd>
+            <div>
+              <p class="bounce">Bonjour!</p>
+              <figure>
+                .bounce { color: white; animation-name: bounce;
+                animation-duration: 1s; animation-timing-function: ease;
+                animation-delay: 0s; animation-iteration-count: 1;
+                animation-direction: normal; animation-fill-mode: forwards; }
+                @keyframes bounce { 0% { letter-spacing: 1.2em; color: white; }
+                100% { letter-spacing: 0.1em; color: blue; } }
+              </figure>
+            </div>
+          </dl>
+        </li>
+        <li class="accordion hidden">
+          <h2 class="title">B</h2>
+          <dl class="content">
+            <dt>CSS box-shadow</dt>
+            <dd>
+              La propriété box-shadow nous permet de donner de la profondeur à
+              un élément. Les principaux paramètres utilisés sont x offset, y
+              offset, le rayon du flou, ainsi que la couleur de l'ombre.
+            </dd>
+
+            <div>
+              <div class="box-shadow"></div>
+              <figure>
+                .box-shadow { box-shadow: 1px 1px 5px aqua, -1px -1px 5px blue;
+                width: 100px; height: 100px; margin: auto; display:
+                inline-block; }
+              </figure>
+            </div>
+          </dl>
+        </li>
+        <li class="accordion hidden">
+          <h2 class="title">C</h2>
+          <dl class="content">
+            <dt>CSS caret-color</dt>
+            <dd>
+              La propriété caret-color permet de définir la couleur du curseur
+              au point d'insertion du texte demandé à l'utilisateur pour remplir
+              un champs texte dans un formulaire.
+            </dd>
+            <div>
+              <!-- mon caret color fonctionnait mais il ne fonctionne pas depuis que j'ai ajouté l'accordéon -->
+              <input autofocus placeholder="Nom" />
+              <figure>
+                input { caret-color: red; color: white; background: gray;
+                font-size: 20px; padding: 50px; }
+              </figure>
+            </div>
+            <dt>CSS circle</dt>
+            <dd>La propriété form-circle permet de créer un cercle.</dd>
+            <div>
+              <span class="circle">Cercle</span>
+              <figure>
+                .circle { background-color: blueviolet; width: 60px; height:
+                60px; border-radius: 50%; display: flex; align-items: center;
+                justify-content: center; font-size: 15px; margin: auto; }
+              </figure>
+            </div>
+          </dl>
+        </li>
+        <li class="accordion hidden">
+          <h2 class="title">D</h2>
+          <dl class="content"></dl>
+        </li>
+        <li class="accordion hidden">
+          <h2 class="title">E</h2>
+          <dl class="content"></dl>
+        </li>
+        <li class="accordion hidden">
+          <h2 class="title">F</h2>
+          <dl class="content">
+            <dt>CSS flex-wrap</dt>
+            <dd>
+              La propriété flex-wrap permet de déterminer si le contenu d'un
+              conteneur est réparti sur une seule ou plusieurs lignes.
+            </dd>
+            <div class="container">
+              <img src="/img/a.jpg" alt="pensée positive" />
+              <img src="/img/b.jpg" alt="pensée positive avec chien" />
+              <img src="/img/c.jpg" alt="blague de chien" />
+            </div>
+            <div>
+              <figure>.container { display: flex; flex-wrap: wrap; }</figure>
+            </div>
+            <!-- font-stretch marche pas?-->
+            <dt>CSS font-stretch</dt>
+            <dd>
+              La propriété font-stretch donne une spécification d'affichage de
+              la police par exemple en normal, condensé ou étendue.
+            </dd>
+            <div>
+              <div class="container2">
+                <p class="condensed">Bonne journée!</p>
+                <p class="normal">Bonne journée!</p>
+                <p class="expanded">Bonne journée!</p>
+              </div>
+              <figure>
+                .container2 { font: 1.5rem } .condensed { font-stretch: 25%; }
+                .normal { font-stretch: 100%; } .expanded { font-stretch: 300%;
+                }
+              </figure>
+            </div>
+          </dl>
+        </li>
+        <li class="accordion hidden">
+          <h2 class="title">G</h2>
+          <dl class="content">
+            <dt>CSS gap</dt>
+            <dd>
+              La propriété gap est un combiné de column-gap et de row-gap. Elle
+              sert à spécifier l'espace entre les colonnes et les rangées dans
+              un conteneur flexbox ou grid.
+            </dd>
+            <div class="grid">
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+            </div>
+            <div>
+              <figure>
+                .grid { display: grid; height: 100px; grid-template-columns:
+                repeat(2, 1fr); gap: 20px 10px; } .grid > div { width: 1rem;
+                background-color: blue; border: 2px solid pink; }
+              </figure>
+            </div>
+          </dl>
+        </li>
+        <li class="accordion hidden">
+          <h2 class="title">H</h2>
+          <dl class="content"></dl>
+        </li>
+        <li class="accordion hidden">
+          <h2 class="title">I</h2>
+          <dl class="content"></dl>
+        </li>
+        <li class="accordion hidden">
+          <h2 class="title">J</h2>
+          <dl class="content">
+            <dt>CSS justify-content</dt>
+            <dd>
+              La propriété justify-content permet l'alignement des éléments dans
+              l'axe principal du conteneur flex. Elle définie comment l'espace
+              est distribué entre et autour des éléments.
+            </dd>
+            <div>
+              <div class="outer-container">
+                <div class="pink">A</div>
+                <div class="purple">B</div>
+                <div class="blue">C</div>
+              </div>
+              <figure>
+                .outer-container { height: 250px; font: 100 20px/100px
+                sans-serif; text-align: center; color: white; border: 1px solid
+                darkslategray; display: flex; justify-content: space-around; }
+                .outer-container div { width: 10%; } .pink { background:
+                hotpink; } .purple { background: purple; } .blue { background:
+                blueviolet; }
+              </figure>
+            </div>
+          </dl>
+        </li>
+        <li class="accordion hidden">
+          <h2 class="title">K</h2>
+          <dl class="content"></dl>
+        </li>
+        <li class="accordion hidden">
+          <h2 class="title">L</h2>
+          <dl class="content">
+            <dt>CSS line-break</dt>
+            <dd>
+              Le propriété line-break établie la règle de bris de ligne, ce qui
+              permet de s'adapter aux différents langages. Par exemple les
+              langues asiatiques comme le chinois, le japonais et le koréen
+              n'ont pas les mêmes règles pour le bris de ligne dans un texte
+              comparativement au texte en français ou en anglais.
+            </dd>
+            <div>
+              <p class="linebreak">
+                Avec mon diplôme de PMI, je vise une emploi dans la gestion de
+                contenu, la production de maquettes, mais certainement pas la
+                job de dev... le code c'est vraiment pas mon trip.
+              </p>
+              <figure>.linebreak { width: 20em; line-break: normal; }</figure>
+            </div>
+          </dl>
+        </li>
+        <li class="accordion hidden">
+          <h2 class="title">M</h2>
+          <dl class="content"></dl>
+        </li>
+        <li class="accordion hidden">
+          <h2 class="title">N</h2>
+          <dl class="content"></dl>
+        </li>
+        <li class="accordion hidden">
+          <h2 class="title">O</h2>
+          <dl class="content">
+            <dt>CSS outline-offset</dt>
+            <dd>
+              La propriété outline-offset permet de spécifier le décalage entre
+              la boîte et la ligne extérieure.
+            </dd>
+            <div>
+              <div class="offset"></div>
+              <figure>
+                { width: 100px; height: 100px; outline-width: 5px;
+                outline-style: solid; outline-color: limegreen; outline-offset:
+                10px; border: 1px solid black; margin: 20px; }
+              </figure>
+            </div>
+          </dl>
+        </li>
+        <li class="accordion hidden">
+          <h2 class="title">P</h2>
+          <dl class="content"></dl>
+        </li>
+        <li class="accordion hidden">
+          <h2 class="title">Q</h2>
+          <dl class="content"></dl>
+        </li>
+        <li class="accordion hidden">
+          <h2 class="title">R</h2>
+          <dl class="content">
+            <dt>CSS resize</dt>
+            <dd>
+              La propriété resize permet de spécifier la manière dont une zone
+              de texte textarea peut être redimentionnée par l'utilisateur. Les
+              valeurs possibles sont both pour redimentionner verticalement et
+              horizontalement, horizontal, vertical ou none.
+            </dd>
+            <div>
+              <div class="resize">Bonjour!</div>
+              <figure>
+                .resize { width: 30%; padding: 20px; background: hotpink;
+                overflow: auto; resize: none; }
+              </figure>
+            </div>
+            <dt>CSS rounded-border</dt>
+            <dd>
+              La propriété rounded-border permet d'arrondir les coins des boîtes
+              et des boutons. J'ai créé cette boîte avec la propriété
+              border-radius.
+            </dd>
+            <div>
+              <div class="rounded"><p class="bte">Bonjour</p></div>
+              <figure>
+                .rounded { border-radius: 12px; background-color: hotpink;
+                width: 200px; height: 100px; line-height: 50px; font-size:
+                1.5rem; margin: auto; } .bte { text-align: center blue;
+                padding-left: 15px; }
+              </figure>
+            </div>
+          </dl>
+        </li>
+        <li class="accordion hidden">
+          <h2 class="title">S</h2>
+          <dl class="content">
+            <dt>CSS shape-outside</dt>
+            <dd>
+              La propriété shape-outside contrôle la manière dont le contenu
+              texte va se positionner autour d'une forme.
+            </dd>
+            <div>
+              <div>
+                <p>
+                  <img class="outside" src="/img/a.jpg" alt="pensée positive" />
+                  Doggo ipsum many pats heckin angery woofer shoober, dat tungg
+                  tho. Blop corgo boof very hand that feed shibe, pupperino.
+                  Bork extremely cuuuuuute maximum borkdrive wow very biscit
+                  floofs very jealous pupper, shoob much ruin diet pupper. Sub
+                  woofer puggo ur givin me a spook super chub smol you are doin
+                  me a concern, maximum borkdrive much ruin diet wrinkler. Doge
+                  vvv blop heck, blep you are doing me a frighten.
+                </p>
+              </div>
+              <figure>
+                .outside { shape-outside: circle(50%); width: 500px; height:
+                200px; text-align: left; }
+              </figure>
+            </div>
+          </dl>
+        </li>
+        <li class="accordion hidden">
+          <h2 class="title">T</h2>
+          <dl class="content">
+            <dt>CSS transform</dt>
+            <dd>
+              La propriété transform nous permet de transformer un élément 2D en
+              un élément 3D.
+            </dd>
+            <div class="transform">
+              <div class="rotate">Bonjour!</div>
+              <div class="skew">Bonjour!</div>
+              <figure>
+                .rotate { transform: rotate(30deg); } .skew { transform:
+                skewX(10deg) skewY(15deg); }
+              </figure>
+            </div>
+          </dl>
+        </li>
+        <li class="accordion hidden">
+          <h2 class="title">U</h2>
+          <dl class="content"></dl>
+        </li>
+        <li class="accordion hidden">
+          <h2 class="title">V</h2>
+          <dl class="content"></dl>
+        </li>
+        <li class="accordion hidden">
+          <h2 class="title">W</h2>
+          <dl class="content">
+            <dt>CSS word-break</dt>
+            <dd>
+              La propriété word-break permet de créer un bris dans un mot, même
+              si le mot aurait pu être mis sur la ligne suivante.
+            </dd>
+            <div>
+              <div class="word">
+                Je suis un mot très loooooooooooooooooooooooooooooooooooooooong,
+                suivi de Doggo Ipsum. Doggo ipsum many pats heckin angery woofer
+                shoober, dat tungg tho. Blop corgo boof very hand that feed
+                shibe, pupperino.
+              </div>
+              <figure>
+                .word { width: 300px; background-color: yellowgreen;
+                margin-right: 100px; } .word-break { word-break: break-word; }
+                .word-wrap { word-wrap: break-word; }
+              </figure>
+            </div>
+            <dt>CSS writing-mode</dt>
+            <dd>
+              La propriété writing-mode permet de spécifier l'orientation de
+              l'écriture, par exemple écrire à la verticale.
+            </dd>
+            <div>
+              <div class="write">
+                <p class="mixed">Bonjour Welcome</p>
+                <p class="upright">Bonjour Welcome</p>
+                <p class="sideways">Bonjour Welcome</p>
+              </div>
+              <figure>
+                .write { writing-mode: vertical-rl; font-size: 2em; float: left;
+                } .mixed { text-orientation: mixed; } .upright {
+                text-orientation: upright; } .sideways { text-orientation:
+                sideways; }
+              </figure>
+            </div>
+          </dl>
+        </li>
+        <li class="accordion hidden">
+          <h2 class="title">X</h2>
+          <dl class="content"></dl>
+        </li>
+        <li class="accordion hidden">
+          <h2 class="title">Y</h2>
+          <dl class="content"></dl>
+        </li>
+        <li class="accordion hidden">
+          <h2 class="title">Z</h2>
+          <dl class="content"></dl>
+        </li>
+      </ul>
+    </main>
+    <footer>
+      <p>PMI-2023 par Johanne Parent</p>
+    </footer>
+  </body>
+</html>

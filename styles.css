@@ -1,0 +1,247 @@
+.sticky {
+  position: sticky;
+  top: 0;
+}
+
+li.accordion {
+  list-style: none;
+}
+.accordion > .title {
+  background-color: darkolivegreen;
+}
+
+.accordion.hidden > .title {
+  background-color: darkslategray;
+}
+
+.accordion > .title::before {
+  content: "";
+  border: solid black;
+  border-width: 0 2px 2px 0;
+  display: inline-block;
+  height: 7px;
+  margin: 5px;
+  width: 7px;
+  transform: rotate(-135deg);
+}
+
+.accordion.hidden > .title::before {
+  transform: rotate(45deg);
+}
+
+.accordion > .content {
+  background-color: darkgray;
+}
+
+.accordion.hidden > .content {
+  display: none;
+}
+
+body {
+  background-color: azure;
+}
+header,
+footer {
+  background-color: darkslategrey;
+  color: azure;
+}
+h1 {
+  text-transform: uppercase;
+  text-align: center;
+}
+p {
+  text-align: center;
+}
+.top {
+  position: sticky;
+}
+div {
+  width: 500px;
+  margin: auto;
+  border: 3px solid darkslategray;
+}
+.bounce {
+  color: white;
+  animation-name: bounce;
+  animation-duration: 1s;
+  animation-timing-function: ease;
+  animation-delay: 0s;
+  animation-iteration-count: 1;
+  animation-direction: normal;
+  animation-fill-mode: forwards;
+}
+@keyframes bounce {
+  0% {
+    letter-spacing: 1.2em;
+    color: white;
+  }
+  100% {
+    letter-spacing: 0.1em;
+    color: blue;
+  }
+}
+.box-shadow {
+  box-shadow: 1px 1px 5px aqua, -1px -1px 5px blue;
+  width: 100px;
+  height: 100px;
+  margin: auto;
+  display: inline-block;
+}
+input {
+  caret-color: red 5px;
+  color: white;
+  background: gray;
+  font-size: 20px;
+  padding: 50px;
+}
+
+.circle {
+  background-color: blueviolet;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 15px;
+  margin: auto;
+}
+
+img {
+  max-width: 150px;
+}
+.container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.container2 {
+  font: 1.5rem;
+}
+
+.condensed {
+  font-stretch: 25%;
+}
+
+.normal {
+  font-stretch: 100%;
+}
+
+.expanded {
+  font-stretch: 300%;
+}
+
+.grid {
+  display: grid;
+  height: 100px;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px 10px;
+}
+.grid > div {
+  width: 1rem;
+  background-color: blue;
+  border: 2px solid pink;
+}
+
+.outer-container {
+  height: 250px;
+  font: 100 20px/100px sans-serif;
+  text-align: center;
+  color: white;
+  border: 1px solid darkslategray;
+  display: flex;
+  justify-content: space-around;
+}
+.outer-container div {
+  width: 10%;
+}
+.pink {
+  background: hotpink;
+}
+.purple {
+  background: purple;
+}
+.blue {
+  background: blueviolet;
+}
+
+.linebreak {
+  width: 20em;
+  line-break: normal;
+}
+
+.offset {
+  width: 80px;
+  height: 80px;
+  outline-width: 10px;
+  outline-style: dashed;
+  outline-color: hotpink;
+  outline-offset: 20px;
+  border: 5px solid purple;
+  margin: 30px;
+}
+
+.resize {
+  width: 30%;
+  padding: 20px;
+  background: hotpink;
+  overflow: auto;
+  resize: none;
+}
+
+.rounded {
+  border-radius: 12px;
+  background-color: hotpink;
+  width: 200px;
+  height: 100px;
+  line-height: 50px;
+
+  font-size: 1.5rem;
+  margin: auto;
+}
+.bte {
+  text-align: center blue;
+  padding-left: 15px;
+}
+/*le circle marche pas*/
+.outside {
+  shape-outside: circle(50%);
+  width: 500px;
+  height: 200px;
+  text-align: left;
+}
+
+.rotate {
+  transform: rotate(30deg);
+}
+.skew {
+  transform: skewX(10deg) skewY(15deg);
+}
+
+.word {
+  width: 300px;
+  background-color: yellowgreen;
+  margin-right: 100px;
+}
+.word-break {
+  word-break: break-word;
+}
+.word-wrap {
+  word-wrap: break-word;
+}
+
+.write {
+  writing-mode: vertical-rl;
+  font-size: 2em;
+  float: left;
+}
+
+.mixed {
+  text-orientation: mixed;
+}
+.upright {
+  text-orientation: upright;
+}
+.sideways {
+  text-orientation: sideways;
+}
